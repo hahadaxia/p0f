@@ -339,7 +339,7 @@ void start_observation(char* keyword, u8 field_cnt, u8 to_srv,
     time_t ut = get_unix_time();
     struct tm* lt = localtime(&ut);
 
-    strftime((char*)tmp, 64, "%Y/%m/%d %H:%M:%S", lt);
+    strftime((char*)tmp, 64, "%Y-%m-%d %H:%M:%S", lt);/* / to - zzh 2018.5.15*/
 
     if (json_mode) {
         json_record = json_object();
